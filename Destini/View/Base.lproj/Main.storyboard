@@ -29,7 +29,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgo-5f-x6A">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Dgo-5f-x6A">
                                         <rect key="frame" x="0.0" y="598" width="374" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="S1U-ze-fd3"/>
@@ -43,7 +43,7 @@
                                             <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXi-nY-U5A"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-QE-mXU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-QE-mXU">
                                         <rect key="frame" x="0.0" y="718" width="374" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="cQZ-ck-flh"/>
