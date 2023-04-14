@@ -13,34 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
     
-    let stories = [Story(title: "You see a fork in the road.", choice1: "Take a left.", choice2: "Take a right."),
-                   Story(title: "You see a tiger.", choice1: "Shout for help.", choice2: "Play dead."),
-                   Story(title: "You find a treasure chest.", choice1: "Open it.", choice2: "Check for traps.")]
-    
-    var choiceNumber = 0
+    var storyBrain = StoryBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        updateUI(choiceNumber)
+        updateUI(storyBrain.storyNumber)
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
-        
-        let userChoice = sender.currentTitle
-        
-        if userChoice == stories[choiceNumber].choice1 {
-            choiceNumber += 1
-        } else {
-            choiceNumber += 2
-        }
-        updateUI(choiceNumber)
+        storyBrain.nextStory(userChoice: sender.currentTitle!)
+        updateUI(storyBrain.storyNumber)
     }
     
     func updateUI(_ number: Int) {
-        storyLabel.text = stories[number].title
-        choice1Button.setTitle(stories[number].choice1, for: .normal)
-        choice2Button.setTitle(stories[number].choice2, for: .normal)
-    }
-    
+        storyLabel.text = storyBrain.stories[number].title
+        choice1Button.setTitle(storyBrain.stories[number].choice1, for: .normal)
+        choice2Button.setTitle(storyBrain.stories[number].choice2, for: .normal)
+    }    
 }
