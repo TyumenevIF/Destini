@@ -23,11 +23,10 @@ class StackView: UIView {
         label.textColor = .white
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    let choice1Button: UIButton = {
+    lazy var choice1Button: UIButton = {
         let button = UIButton()
         button.setTitle("Choice 1", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 23)
@@ -39,7 +38,7 @@ class StackView: UIView {
         return button
     }()
     
-    let choice2Button: UIButton = {
+    lazy var choice2Button: UIButton = {
         let button = UIButton()
         button.setTitle("Choice 2", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 23)
