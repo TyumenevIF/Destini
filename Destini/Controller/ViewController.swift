@@ -25,13 +25,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stackView.delegate = self
-        setViews()
+        setSubviews()
         setupConstraints()
         updateUI(storyBrain.storyNumber)
     }
     
     // MARK: - Private Methods
-    private func setViews() {
+    private func setSubviews() {
         view.addSubview(backgroundImageView)
         view.addSubview(stackView)
     }

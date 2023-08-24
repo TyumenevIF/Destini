@@ -65,8 +65,8 @@ class StackView: UIView {
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addViews()
-        addConstraints()
+        setSubviews()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -74,11 +74,11 @@ class StackView: UIView {
     }
     
     // MARK: - Private Methods
-    private func addViews() {
+    private func setSubviews() {
         addSubview(stackView)
     }
     
-    private func addConstraints() {
+    private func setupConstraints() {
         stackView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
